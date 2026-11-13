@@ -4,7 +4,7 @@ FictSelf AI is a modern full-stack web application designed for fiction writers 
 
 ---
 
-## 📖 Overview & Problem Statement
+##  Overview & Problem Statement
 
 ### The Problem
 Traditional creative writing tools isolate prose drafting from worldbuilding bibles and character sheets. When authors attempt to brainstorm or roleplay with conventional conversational LLMs, those models lack long-term memory, hallucinate inconsistent lore, spoil unwritten narrative twists, and fail to speak in the authentic voice of the character.
@@ -17,26 +17,26 @@ FictSelf couples a rich reader and writer hub with a dedicated **Character Memor
 
 ---
 
-## ✨ Features
+##  Features
 
-### ✍️ Writer Suite
+###  Writer Suite
 - **Story & Chapter Workspace:** Manage multi-chapter fiction projects, track status (Draft, Ongoing, Completed), word counts, tags, and genres.
 - **Character Studio:** Define deep profiles including roles, backstories, personality archetypes, motivations, secrets, and avatar imagery.
 - **Dynamic Personas:** Define how the writer or reader is perceived during character interactions (e.g., as another character, an unseen observer, or a co-author).
 - **Writer Review Queue:** Review and approve AI-extracted narrative candidates (canon events, secrets, emotional impressions, world rules) before they become permanent memory.
 
-### 🤖 Story-Aware Character Companions
+###  Story-Aware Character Companions
 - **Context-Assembled Dialogue:** Each turn pulls relevant canon memories, emotional memories, pinned messages, and recent draft scenes.
 - **Conversational Memory Controls:** Pin, edit, branch, or regenerate character responses to guide narrative evolution.
 - **Memory Inspector:** Inspect the internal context snapshot used to generate any character response for complete creative transparency.
 
-### 📚 Reader Experience
+###  Reader Experience
 - **Discover & Read:** Public stories feed with genre filtering, view tracking, and chapter-by-chapter reading progress.
 - **Interactive Community:** Chapter voting, threaded reader discussions, user profiles, following feeds, and curated reading lists.
 
 ---
 
-## 🏛 Architecture & RAG Pipeline
+## Architecture & RAG Pipeline
 
 ```
 ┌────────────────────────────────────────────────────────┐
@@ -70,7 +70,7 @@ FictSelf couples a rich reader and writer hub with a dedicated **Character Memor
 
 ---
 
-## 💰 AI Provider Costs & Usage Disclosure
+##  AI Provider Costs & Usage Disclosure
 
 > [!WARNING]
 > **LLM API Usage Costs:** FictSelf currently uses **Groq's Inference API** for character generation and automated memory extraction. Anyone hosting or running this codebase must supply their own API credentials and will be responsible for usage fees incurred.
@@ -99,7 +99,7 @@ FictSelf couples a rich reader and writer hub with a dedicated **Character Memor
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 ### Frontend
 - **Framework:** React 19, TypeScript
@@ -118,7 +118,7 @@ FictSelf couples a rich reader and writer hub with a dedicated **Character Memor
 
 ---
 
-## 🚀 Installation & Local Setup
+##  Installation & Local Setup
 
 ### Prerequisites
 - **Node.js** 20+ and **npm**
