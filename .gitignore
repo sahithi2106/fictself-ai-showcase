@@ -1,0 +1,69 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment and Secret Files
+.env
+.env.*
+!.env.example
+*.env
+*.key
+*.pem
+*.cert
+
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Node.js & Frontend Build
+node_modules/
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+dist-ssr/
+*.local
+
+# Database & Storage Files (Never commit user data or local DBs)
+*.db
+*.sqlite
+*.sqlite3
+fictself.db
+backend/fictself.db
+chroma_db/
+backend/chroma_db/
+backend/uploads/
+uploads/
+
+# Logs
+*.log
+backend/*.log
+import.log
+
+# IDE & Editor Configuration
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.swp
+.swo
+
+# Temporary / Scratch Files
+scratch/
+tmp/
+temp/
+

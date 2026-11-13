@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", Georgia, serif;
+
+  --color-background: var(--background);
+  --color-card: var(--card);
+  --color-sidebar: var(--sidebar);
+  --color-border: var(--border);
+
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-muted: var(--text-muted);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+}
+
+:root {
+  /* Cosmic Dark Mode */
+  --bg-page: #0d0f17;                /* Deep premium navy background */
+  --bg-sidebar: #090a10;             /* Darker navy for sidebar contrast */
+  --bg-card: #131622;                /* Elegant dark navy/slate cards */
+  --bg-card-hover: #191d2d;
+  --bg-input: #0a0c14;
+  --color-text-primary: #f1f5f9;     
+  --color-text-secondary: #94a3b8;   
+  --border-color: rgba(148, 163, 184, 0.12); 
+  --color-accent: #8b5cf6;           /* Violet accent */
+  --color-accent-hover: #a78bfa;
+  --color-accent-light: rgba(139, 92, 246, 0.12);
+
+  /* Semantic Design Tokens - Dark Mode Defaults */
+  --background: #0d0f17;
+  --sidebar: #090a10;
+  --card: #131622;
+  --panel: #1b1e2e;
+  --border: rgba(148, 163, 184, 0.12);
+  --input-bg: #0a0c14;
+
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+}
+
+html.light {
+  /* Soft Notion/Apple light mode - warm/soft grays */
+  --bg-page: #f4f5f6;                /* Calm gray background */
+  --bg-sidebar: #ebecee;             /* Notion-style light gray sidebar */
+  --bg-card: #ffffff;                /* Crisp white card system */
+  --bg-card-hover: #fafafa;
+  --bg-input: #ffffff;
+  --color-text-primary: #12131a;     
+  --color-text-secondary: #5e6675;   
+  --border-color: rgba(15, 23, 42, 0.12); 
+  --color-accent: #6d28d9;           /* Professional deep violet */
+  --color-accent-hover: #5b21b6;
+  --color-accent-light: #f5f3ff;
+
+  /* Semantic Design Tokens - Stark Light Mode */
+  --background: #f4f5f6;
+  --sidebar: #ebecee;
+  --card: #ffffff;
+  --panel: #fcfcfc;
+  --border: rgba(15, 23, 42, 0.12);
+  --input-bg: #ffffff;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--text-primary);
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.light body {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+/* Card and container background overrides for BOTH light and dark modes */
+[class*="bg-[#0d0f17]"],
+[class*="bg-[#0b0d14]"],
+[class*="bg-[#0f1422]"],
+[class*="bg-[#111827]"],
+[class*="bg-[#0d0d0d]"],
+[class*="bg-[#0c0c0c]"],
+[class*="bg-[#0c0d12]"],
+[class*="bg-[#111111]"],
+[class*="bg-[#111]"],
+[class*="bg-[#141414]"],
+[class*="bg-[#1a1a1a]"],
+[class*="bg-[#0a0a0a]"],
+[class*="bg-[#0b0f19]"],
+[class*="bg-[#090d16]"],
+[class*="bg-[#090909]"],
+[class*="bg-black"],
+[class*="bg-[#050505]"],
+[class*="bg-[#141824]"],
+[class*="bg-[#0f1422]/60"],
+[class*="bg-[#0f1422]/70"],
+[class*="bg-[#0f1422]/50"],
+[class*="bg-slate-905"],
+[class*="bg-slate-900"],
+[class*="bg-[#0b0c10]"],
+[class*="bg-[#000000]"],
+[class*="bg-neutral-900"],
+[class*="bg-neutral-950"],
+[class*="bg-zinc-950"],
+[class*="bg-zinc-900"] {
+  background-color: var(--card) !important;
+}
+
+/* Sidebar background overrides */
+[class*="bg-[#090a10]"] {
+  background-color: var(--sidebar) !important;
+}
+
+/* Interactive Input styles overrides */
+[class*="bg-[#050507]"],
+[class*="bg-[#0a0c10]"],
+[class*="bg-[#0a0c14]"] {
+  background-color: var(--input-bg) !important;
+}
+
+/* Border overrides */
+[class*="border-[#1a1a1a]"],
+[class*="border-[#1c1c1c]"],
+[class*="border-slate-800"],
+[class*="border-slate-850"],
+[class*="border-slate-900"],
+[class*="border-slate-200"],
+[class*="border-slate-100"],
+[class*="border-[#222]"],
+[class*="border-[#252525]"],
+[class*="border-[#222222]"] {
+  border-color: var(--border) !important;
+}
+
+/* Primary text classes overrides: Never allow bad text contrast */
+[class*="text-white"],
+[class*="text-slate-100"],
+[class*="text-slate-200"],
+[class*="text-[#f1f5f9]"],
+[class*="text-[#f8fafc]"],
+[class*="text-[#e2e8f0]"],
+[class*="text-[#f3f4f6]"],
+[class*="text-[#0f172a]"],
+[class*="text-slate-250"],
+[class*="text-slate-300"],
+[class*="text-zinc-100"],
+[class*="text-zinc-200"],
+[class*="text-zinc-300"],
+[class*="text-neutral-100"] {
+  color: var(--text-primary) !important;
+}
+
+/* Secondary text classes overrides */
+[class*="text-slate-400"],
+[class*="text-slate-450"],
+[class*="text-slate-350"],
+[class*="text-slate-405"],
+[class*="text-zinc-400"],
+[class*="text-zinc-300"],
+[class*="text-neutral-400"],
+[class*="text-[#cbd5e1]"],
+[class*="text-[#94a3b8]"] {
+  color: var(--text-secondary) !important;
+}
+
+/* Muted text classes overrides */
+[class*="text-slate-500"],
+[class*="text-slate-600"],
+[class*="text-slate-502"],
+[class*="text-zinc-500"],
+[class*="text-zinc-650"],
+[class*="text-neutral-500"],
+[class*="text-slate-550"] {
+  color: var(--text-muted) !important;
+}
+
+/* Button & accent overrides for light mode */
+html.light [class*="bg-blue-600"],
+html.light [class*="hover:bg-blue-500"],
+html.light [class*="from-blue-600"],
+html.light [class*="to-indigo-600"] {
+  background-color: var(--color-accent) !important;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+html.light [class*="hover:bg-blue-550"],
+html.light [class*="hover:bg-blue-500"] {
+  background-color: var(--color-accent-hover) !important;
+}
+
+html.light [class*="text-blue-400"],
+html.light [class*="text-blue-300"],
+html.light [class*="text-indigo-400"] {
+  color: var(--color-accent) !important;
+}
+
+/* Custom scrollbars for SaaS elements */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-sidebar);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.4);
+  }
+}
+
+.glow-btn {
+  animation: pulseGlow 3s infinite;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Writing Studio Editor Theme Definitions */
+.editor-theme-light {
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+  font-family: var(--font-serif) !important;
+}
+.editor-theme-light textarea {
+  color: #1a1a1a !important;
+  caret-color: #1a1a1a !important;
+}
+.editor-theme-light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.editor-theme-dark {
+  background-color: #0f111a !important;
+  color: #e2e8f0 !important;
+  font-family: var(--font-serif) !important;
+}
+.editor-theme-dark textarea {
+  color: #e2e8f0 !important;
+  caret-color: #a78bfa !important;
+}
+.editor-theme-dark textarea::placeholder {
+  color: #4b5563 !important;
+}
+
+.editor-theme-paper {
+  background-color: #faf6ee !important; /* extremely soft creamy warm paper */
+  color: #2d261e !important;
+  font-family: var(--font-serif) !important;
+  background-image: radial-gradient(#e5dec9 1px, transparent 1px) !important;
+  background-size: 20px 20px !important;
+}
+.editor-theme-paper textarea {
+  color: #2d261e !important;
+  caret-color: #6d4c41 !important;
+}
+.editor-theme-paper textarea::placeholder {
+  color: #b0a793 !important;
+}
+
+.editor-theme-sepia {
+  background-color: #fbf0db !important; /* traditional warm amber sepia */
+  color: #433422 !important;
+  font-family: var(--font-serif) !important;
+}
+.editor-theme-sepia textarea {
+  color: #433422 !important;
+  caret-color: #7c2d12 !important;
+}
+.editor-theme-sepia textarea::placeholder {
+  color: #caa07b !important;
+}
