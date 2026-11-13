@@ -204,7 +204,7 @@ The application will launch at `http://localhost:3000`.
 
 ---
 
-## 📌 Implementation Status & Limitations
+##  Implementation Status & Limitations
 
 ### Currently Implemented
 - Full character memory hierarchy (Canon, Emotional, Pinned, RAG Story Chunks).
@@ -222,7 +222,7 @@ The application will launch at `http://localhost:3000`.
 
 ---
 
-## 🤝 Credits & Acknowledgements
+##  Credits & Acknowledgements
 
 - Built with [FastAPI](https://fastapi.tiangolo.com/), [React](https://react.dev/), [Vite](https://vitejs.dev/), and [Tailwind CSS](https://tailwindcss.com/).
 - LLM inference powered by [Groq](https://groq.com/).
